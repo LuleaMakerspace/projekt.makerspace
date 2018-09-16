@@ -5,5 +5,8 @@
 </template>
 
 <style>
+.card-text {
+ max-height: 100px;
+ overflow: hidden;
+}
 </style>
-
