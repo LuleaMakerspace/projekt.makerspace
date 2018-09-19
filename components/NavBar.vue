@@ -1,15 +1,14 @@
 <template>
     <div>
-        <b-navbar toggleable="md" type="dark">
+        <b-navbar toggleable="md" type="light">
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
         <b-navbar-brand to="/">
-            <img src="https://pbs.twimg.com/profile_images/442295892305932289/u6pIlt0z.png" class="d-inline-block align-top" alt="BV" style="height: 30px; width: 30px;">
-            Luleå Makerspace
+            <img src="https://pbs.twimg.com/profile_images/442295892305932289/u6pIlt0z.png" class="d-inline-block align-top" alt="BV" style="height: 30px; width: 30px; border-radius: 100%;">
+            Luleå Makerspace Project
         </b-navbar-brand>
         <b-collapse is-nav id="nav_collapse">
             <b-navbar-nav>
                 <b-nav-item href="http://www.luleamakerspace.se">Blogg</b-nav-item>
-                <b-nav-item to="/info">Info</b-nav-item>
             </b-navbar-nav>
 
                 <!-- Right aligned nav items 
@@ -26,6 +25,8 @@
 
 <style>
     .navbar {
-        background-color: #2982b7;
+        background: white;
+        border-bottom: 1px solid rgba(49, 49, 49, 0.33);
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.13);
     }
 </style>

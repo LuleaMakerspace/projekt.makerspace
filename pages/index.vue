@@ -1,24 +1,24 @@
 <template>
   <div class="container">
-    <game-list :games="games"></game-list>
+    <project-list :projects="projects"></project-list>
   </div>
 </template>
 
 <script>
-import GameList from "~/components/GameList.vue";
+import ProjectList from "~/components/ProjectList.vue";
 import services from "~/assets/services/";
 
 export default {
   components: {
-    GameList
+    ProjectList
   },
   data() {
     return {
-      games: []
+      projects: []
     };
   },
   async beforeMount() {
-    this.games = await services.game.getGames()
+    this.projects = await services.project.getProjects()
   },
 };
 </script>

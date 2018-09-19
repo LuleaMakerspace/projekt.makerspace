@@ -1,5 +1,5 @@
-import game from './game'
+import project from './projectService'
 
 export default {
-    game
+    project
 }
