@@ -17,6 +17,9 @@ export default {
 </script>
 
 <style>
+body {
+  background: #f9f9fa;
+}
 
 .container {
   padding-top: 10px;
@@ -28,12 +31,10 @@ export default {
   border: 1px solid #d6d6d6;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 3px;
-  box-shadow: 3px 3px 0px #bababa;
-}
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.13);
+  margin-bottom: 20px;
 
-body {
-  background: #f9f9fa;
 }
 
 .cardlist .card-text {
