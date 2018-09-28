@@ -19,6 +19,6 @@ export default {
   },
   async beforeMount() {
     this.projects = await services.project.getProjects()
-  },
+  }
 };
 </script>
