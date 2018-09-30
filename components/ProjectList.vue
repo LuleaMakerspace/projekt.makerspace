@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div v-for="(project, index) in projects" :key="index">
-            <project-card :project="projects[index]"></project-card>
-        </div>
+        <b-card-group deck>
+            <project-card v-for="(project, index) in projects" :key="index" :project="projects[index]"></project-card>
+        </b-card-group>
     </div>
 </template>
 

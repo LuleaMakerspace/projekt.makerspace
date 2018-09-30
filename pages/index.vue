@@ -12,13 +12,8 @@ export default {
   components: {
     ProjectList
   },
-  data() {
-    return {
-      projects: []
-    };
-  },
-  async beforeMount() {
-    this.projects = await services.project.getProjects()
+  async asyncData() {
+    return {projects: await services.project.getProjects()}
   }
 };
 </script>
