@@ -20,7 +20,7 @@
 <style>
 .projectcard {
   max-width: 500px;
-  min-width: 300px;
+  min-width: 450px;
   border: 1px solid #d6d6d6;
   margin-left: auto;
   margin-right: auto;
