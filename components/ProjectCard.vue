@@ -31,7 +31,7 @@
 
 .projectcard .card-img {
   border-radius: 3px 3px 0px 0px;
-  max-height: 400px;
+  height: 300px;
   object-fit: cover;
 }
 
