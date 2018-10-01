@@ -29,13 +29,10 @@
   margin-bottom: 20px !important;
 }
 
-.projectcard .card-text {
- max-height: 700px;
- overflow: hidden;
-}
-
 .projectcard .card-img {
   border-radius: 3px 3px 0px 0px;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 
