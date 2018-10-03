@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h1>Snabbupptäck</h1>
     <project-list :projects="projects"></project-list>
   </div>
 </template>
@@ -13,7 +14,7 @@ export default {
     ProjectList
   },
   async asyncData() {
-    return {projects: await services.project.getProjects()}
+    return {projects: services.project.shuffle(await services.project.getProjects())}
   }
 };
 </script>

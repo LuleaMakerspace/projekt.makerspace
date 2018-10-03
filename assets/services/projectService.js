@@ -1,4 +1,5 @@
 import axios from 'axios'
+import sr from 'seedrandom'
 
 export default {
     async getProjects() {
@@ -27,5 +28,13 @@ export default {
             }
         })
         return found
+    },
+    shuffle(projects) {
+        var ny = projects.slice();
+        for (let i = ny.length - 1; i > 0; i--) {
+            const j = Math.floor(sr(new Date().getDate())() * (i + 1));
+            [ny[i], ny[j]] = [ny[j], ny[i]];
+        }
+        return ny;
     }
 }

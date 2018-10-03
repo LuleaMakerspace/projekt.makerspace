@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h1>Search</h1>
-    <h4>Found {{searchedProjects.length}} result(s)</h4>
+    <h1>Sök</h1>
+    <h4>Hittade {{searchedProjects.length}} resultat</h4>
     <project-list :projects="searchedProjects"></project-list>
   </div>
 </template>
