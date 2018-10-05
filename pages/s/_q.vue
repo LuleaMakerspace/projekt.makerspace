@@ -12,8 +12,13 @@ export default {
   components: {
     FullView
   },
-  async asyncData() {
-    return {projects: await projectService.getProjects()}
+  data() {
+    return {
+      projects: []
+    }
+  },
+  async mounted() {
+    this.projects = await projectService.getProjects()
   },
   computed: {
     searchedProjects() {

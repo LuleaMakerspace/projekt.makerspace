@@ -26,6 +26,6 @@ export default {
         })
     },
     shuffle(projects, seed) {
-        return projects.sort(() => Math.random(sr(seed) - 0.5))
+        return projects.sort(() => sr(seed)() - 0.5)
     }
 }

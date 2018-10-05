@@ -13,8 +13,13 @@ export default {
   components: {
     FullView
   },
-  async asyncData() {
-    return {projects: projectService.shuffle(await projectService.getProjects(), new Date().toLocaleDateString("sv-SV"))}
+  data() {
+    return {
+      projects: []
+    }
+  },
+  async mounted() {
+    this.projects = projectService.shuffle(await projectService.getProjects(), new Date().toLocaleDateString("sv-SV"))
   }
 };
 </script>
