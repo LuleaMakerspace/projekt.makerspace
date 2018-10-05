@@ -8,19 +8,19 @@
 
 <script>
 import ProjectList from "~/components/ProjectList.vue";
-import services from "~/assets/services/";
+import projectService from "~/assets/services/projectService";
 
 export default {
   components: {
     ProjectList
   },
   async asyncData() {
-    return {projects: await services.project.getProjects()}
+    return {projects: await projectService.getProjects()}
   },
   computed: {
     searchedProjects() {
       if (this.projects && this.$route.params.q) {
-        return services.project.searchProjects(
+        return projectService.searchProjects(
           this.$route.params.q,
           this.projects
         );

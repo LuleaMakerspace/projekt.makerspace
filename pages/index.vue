@@ -7,14 +7,14 @@
 
 <script>
 import ProjectList from "~/components/ProjectList.vue";
-import services from "~/assets/services/";
+import projectService from "~/assets/services/projectService";
 
 export default {
   components: {
     ProjectList
   },
   async asyncData() {
-    return {projects: services.project.shuffle(await services.project.getProjects())}
+    return {projects: projectService.shuffle(await projectService.getProjects())}
   }
 };
 </script>

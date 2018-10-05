@@ -8,7 +8,6 @@
 
 <script>
 import ProjectCard from "~/components/ProjectCard.vue";
-import services from "~/assets/services/";
 
 export default {
   props: ["projects"],
