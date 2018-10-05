@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <full-view :big="'Snabbupptäck'" :small="'Visar nya projekt, varje dag (' + dateNow + ')'" :projects="projects"></full-view>
+    <full-view :big="'Snabbupptäck'" :small="'Visar nya projekt, varje dag (' + dateNow + ')'" :projects="projects.slice(0, 9)"></full-view>
   </div>
 </template>
 
