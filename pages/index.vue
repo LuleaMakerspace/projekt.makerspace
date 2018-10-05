@@ -1,18 +1,16 @@
 <template>
   <div class="container">
-    <h1>Snabbupptäck</h1>
-    <h4>Visar nya spel, varje dag ({{dateNow}})</h4>
-    <project-list :projects="projects"></project-list>
+    <full-view :big="'Snabbupptäck'" :small="'Visar nya spel, varje dag (' + dateNow + ')'" :projects="projects"></full-view>
   </div>
 </template>
 
 <script>
-import ProjectList from "~/components/ProjectList.vue";
+import FullView from "~/components/FullView.vue";
 import projectService from "~/assets/services/projectService";
 
 export default {
   components: {
-    ProjectList
+    FullView
   },
   data() {
     return {

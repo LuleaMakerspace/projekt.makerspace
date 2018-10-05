@@ -1,18 +1,16 @@
 <template>
   <div class="container">
-    <h1>Sök</h1>
-    <h4>Hittade {{searchedProjects.length}} resultat</h4>
-    <project-list :projects="searchedProjects"></project-list>
+    <full-view :big="'Sök'" :small="'Hittade ' + searchedProjects.length + ' resultat'" :projects="searchedProjects"></full-view>
   </div>
 </template>
 
 <script>
-import ProjectList from "~/components/ProjectList.vue";
+import FullView from "~/components/FullView.vue";
 import projectService from "~/assets/services/projectService";
 
 export default {
   components: {
-    ProjectList
+    FullView
   },
   async asyncData() {
     return {projects: await projectService.getProjects()}
