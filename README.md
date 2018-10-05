@@ -1,23 +1,26 @@
-# spel
+# Information
 
-> till spel.makerspace.se
+En hemsida som visar olika projekt som är gjorda på makerspace. Det finns möjlighet att lägga till länkar och bilder. 
+
+# projekt
+
+> till projekt.makerspace.se
 
 ## Build Setup
 
 ``` bash
-# install dependencies
-$ npm install # Or yarn install
+# installera dependencies
+$ npm install # Eller yarn install
 
-# serve with hot reload at localhost:3000
+# Starta en server med hot reload på localhost:3000
 $ npm run dev
 
-# build for production and launch server
+# Bygg för produktion
 $ npm run build
-$ npm start
 
-# generate static project
+# Generera en statisk sida
 $ npm run generate
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+Kolla [Nuxt.js docs](https://github.com/nuxt/nuxt.js) för mer information.
 
