@@ -12,22 +12,18 @@ export default {
     },
     searchProjects(query, projects) {
         query = query.toLowerCase()
-        let found = []
-        projects.forEach(project => {
+        return projects.filter((project) => {
             if (project.title && project.title.toLowerCase().includes(query)) {
-                found.push(project)
-                return
+                return true
             }
-            if (project.description && project.description.toLowerCase().includes(query)) {
-                found.push(project)
-                return
+            else if (project.description && project.description.toLowerCase().includes(query)) {
+                return true
             }
-            if (project.author && project.author.toLowerCase().includes(query)) {
-                found.push(project)
-                return
+            else if (project.author && project.author.toLowerCase().includes(query)) {
+                return true
             }
+            return false
         })
-        return found
     },
     shuffle(projects) {
         return projects.sort(() => Math.random() - 0.5)
