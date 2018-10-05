@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <full-view :big="'Snabbupptäck'" :small="dateNow" :projects="projects.slice(0, 9)"></full-view>
+    <full-view :big="'Utvalda'" :small="'Uppdateras dagligen'" :projects="projects.slice(0, 3)"></full-view>
+    <full-view :big="'Utforska'" :projects="projects.slice(3)"></full-view>
   </div>
 </template>
 
@@ -11,11 +12,6 @@ import projectService from "~/assets/services/projectService";
 export default {
   components: {
     FullView
-  },
-  data() {
-    return {
-      dateNow: new Date().toLocaleDateString("sv-SV")
-    }
   },
   async asyncData() {
     return {projects: projectService.shuffle(await projectService.getProjects(), new Date().toLocaleDateString("sv-SV"))}

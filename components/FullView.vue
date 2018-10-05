@@ -2,7 +2,9 @@
     <div>
         <h1>{{big}}</h1>
         <h4>{{small}}</h4>
-        <project-list :projects="projects"></project-list>
+        <project-list :projects="pagedProjects"></project-list>
+        <b-pagination size="md" :total-rows="projects.length" v-model="page" :per-page="perPage" v-if="projects.length > perPage">
+        </b-pagination>
     </div>
 </template>
 
@@ -14,6 +16,20 @@ export default {
   props: ["big", "small", "projects"],
   components: {
       ProjectList
+  },
+  data() {
+      return {
+          page: 1,
+          perPage: 6
+      }
+  },
+  computed: {
+      pagedProjects() {
+          return this.projects.slice((this.page-1) * this.perPage, (this.page-1) * this.perPage + this.perPage)
+      },
+      projectLenght() {
+          return this.projects.lenght
+      }
   }
 };
 </script>
