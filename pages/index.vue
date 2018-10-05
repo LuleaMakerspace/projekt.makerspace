@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <full-view :big="'Snabbupptäck'" :small="'Visar nya spel, varje dag (' + dateNow + ')'" :projects="projects"></full-view>
+    <full-view :big="'Snabbupptäck'" :small="'Visar nya projekt, varje dag (' + dateNow + ')'" :projects="projects"></full-view>
   </div>
 </template>
 
