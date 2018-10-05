@@ -4,8 +4,8 @@ import sr from 'seedrandom'
 export default {
     async getProjects() {
         try {
-            let spel = await axios.get('https://raw.githubusercontent.com/LuleaMakerspace/projekt-lista/master/projekt.json')
-            return spel.data
+            let result = await axios.get('https://raw.githubusercontent.com/LuleaMakerspace/projekt-lista/master/projekt.json')
+            return result.data
         } catch (e) {
             return []
         }
