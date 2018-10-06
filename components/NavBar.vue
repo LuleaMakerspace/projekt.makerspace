@@ -11,9 +11,9 @@
                     <b-nav-item href="https://github.com/LuleaMakerspace/projekt-lista">Ladda upp</b-nav-item>
                     <b-nav-form @submit="onSearch">
                         <b-input-group>
-                            <b-form-input size="sm" class="mr-sm-2" type="text" v-model="query" placeholder="Vad letar du efter?"/>
+                            <b-form-input size="sm" class="mr-sm-2" type="text" v-model="query" required placeholder="Vad letar du efter?"/>
                             <b-input-group-append>
-                                <b-button size="sm" class="my-2 my-sm-0" type="submit">Sök</b-button>
+                                <b-button size="sm" class="my-2 my-sm-0" type="submit" style="margin-top: 0px !important">Sök</b-button>
                             </b-input-group-append>
                         </b-input-group>
                     </b-nav-form>
