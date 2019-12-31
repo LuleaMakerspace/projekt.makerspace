@@ -17,8 +17,20 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: brutal;
+  src: url(~assets/fonts/brutal/brutal.woff2);
+}
+
+@font-face {
+  font-family: brutal-thin;
+  src: url(~assets/fonts/brutal/brutal2.woff2);
+}
+
+
 body {
   background: #f9f9fa;
+  font-family: brutal-thin;
 }
 
 .container {

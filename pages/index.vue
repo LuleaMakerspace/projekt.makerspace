@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <full-view :big="'Utvalda'" :small="'Uppdateras dagligen'" :projects="projects.slice(0, 3)"></full-view>
-    <full-view :big="'Utforska'" :projects="projects.slice(3)"></full-view>
+    <full-view :big="'Utvalda'" :small="'Uppdateras dagligen'" :projects="projects.slice(0, 4)"></full-view>
+    <full-view :big="'Utforska'" :projects="projects.slice(4)"></full-view>
   </div>
 </template>
 
