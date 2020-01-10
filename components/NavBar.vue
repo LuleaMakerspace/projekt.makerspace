@@ -43,7 +43,7 @@ export default {
 <style>
 .navbar {
   background: white;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.048);
 }
 .navbar-toggler {
     border: none;

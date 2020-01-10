@@ -38,4 +38,8 @@ body {
   padding-bottom: 10px;
 }
 
+.smallHeader {
+  font-family: brutal !important;
+}
+
 </style>

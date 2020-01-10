@@ -1,0 +1,8 @@
+{
+    "embedSizeTemplates": {
+        "PICO-8": {
+            "ratio": "100",
+            "maxWidth": 512
+        }
+    }
+}

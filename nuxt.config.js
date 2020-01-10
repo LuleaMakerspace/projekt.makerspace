@@ -10,7 +10,13 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Makerspace Projekt' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    ],
+    script: [
+      {
+        src: "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+        type: "text/javascript"
+      }
     ]
   },
   /*
@@ -22,6 +28,9 @@ module.exports = {
 
     // Or if you have custom bootstrap CSS...
     ['bootstrap-vue/nuxt', { css: false }],
+  ],
+  plugins: [
+    "~/plugins/firebase.js"
   ],
   /*
   ** Build configuration

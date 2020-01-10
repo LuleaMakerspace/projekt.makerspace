@@ -1,101 +1,59 @@
 <template>
-  <div class="projectcard" style="display: inline-flex">
+  <!---<div class="projectcard" style="display: inline-flex">
+    <n-link :to="'/p/' + project.id">
     <div class="contents">
-      <img :src="project.image" />
+      <div class="thumbnail">
+      <img :src="project.image">
+      <div class="playIcons" v-if="project.play" style="font-weight: bold;position: absolute; top: 5px; left: 10px; color: #007bff; font-size: 20px;">
+        <span v-if="project.play.download">⤓</span>
+        <span v-if="project.play.embed">⯈</span>
+      </div>
+      </div>
       <div class="description">
         <span id="title">{{project.title}}</span>
         <br />
-        <span id="author">{{project.author}}</span>
+        <span id="authors"><span v-for="author in project.authors" :key="author" class="author">{{author}}<span v-if="author != project.authors[project.authors.length - 1]">,</span></span></span>
       </div>
     </div>
+    </n-link>
+  </div>--->
+  <div style="margin-bottom: 20px;" class="projectcard">
+    <n-link :to="'/p/' + project.id">
+      <b-row>
+        <b-col cols="6" md="5" style="height: 100px;">
+          <img :src="project.image" style="width: 100%; height: 100%; object-fit: cover;" />
+        </b-col>
+        <b-col style="font-family: brutal;">
+          <span>{{project.title}}</span>
+          <br />
+          <span style="color: rgba(0, 0, 0, 0.7);">
+            <horizontal-list :list="project.authors"></horizontal-list>
+          </span>
+        </b-col>
+      </b-row>
+    </n-link>
   </div>
-  <!----
-    <b-card :title="project.title" :img-src="project.image" class="projectcard">
-        <div slot="footer">
-            <div v-for="(link, index) in project.links" :key="index">
-                <small class="text-muted"><b-link :href="project.links[index]" v-if="project.links[index]">{{project.links[index]}}</b-link></small>
-                <br/>
-            </div>
-            <small class="text-muted" v-if="project.author">av {{project.author}}</small>
-        </div>
-  </b-card> ---->
 </template>
 
 <script>
+import HorizontalList from "./HorizontalList.vue";
+
 export default {
+  components: {
+    HorizontalList
+  },
   props: ["project"]
 };
 </script>
 
 <style>
-.projectcard {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px !important;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-
-  hyphens: auto;
+.projectcard a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit;
 }
 
-.projectcard img {
-    min-height: 270px;
-    max-height: 270px;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .projectcard .contents {
-    min-width: 200px;
-    max-width: 200px;
-}
-
-@media (min-width: 750px) {
-  .projectcard img {
-    min-height: 300px;
-    max-height: 300px;
-  }
-
-  .projectcard .contents {
-    min-width: 200px;
-    max-width: 200px;
-  }
-}
-
-@media (min-width: 1200px) {
-    .projectcard img {
-    min-height: 400px;
-    max-height: 400px;
-    }
-
-    .projectcard .contents {
-    min-width: 250px;
-    max-width: 250px;
-    }
-}
-
-
-.projectcard .description {
-  margin-top: 4px;
-  font-family: brutal;
-}
-
-.projectcard .description #author {
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.projectcard {
-  animation: fadein 0.4s ease-in-out;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.projectcard a:hover {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit;
 }
 </style>
