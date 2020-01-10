@@ -24,7 +24,7 @@
           <img :src="project.image" style="width: 100%; height: 100%; object-fit: cover;" />
           <div class="playIcons" v-if="project.play" style="border-radius: 5px; background-color: #222f3e; padding: 0px 7px 0 7px; font-weight: bold;position: absolute; top: 5px; left: 20px; color: white; font-size: 20px;">
             <span v-if="project.play.download">⤓</span>
-            <span v-if="project.play.embed">⯈</span>
+            <span v-if="project.play.embed">►</span>
           </div>
         </b-col>
         <b-col style="font-family: brutal;">
