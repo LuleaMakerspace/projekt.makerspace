@@ -16,6 +16,7 @@
   "dependencies": {
     "axios": "^0.18.1",
     "bootstrap-vue": "^2.1.0",
+    "core-js": "^3.6.2",
     "firebase": "^7.6.1",
     "inquirer": "^7.0.1",
     "marked": "^0.8.0",
