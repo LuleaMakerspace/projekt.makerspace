@@ -19,15 +19,13 @@
         </b-row>
       </div>
       <div style="background-color: #eaf3ea" v-if="project.play" class="links">
-          <a :href="project.play.download" class="button"><b-button variant="success" :disabled="!project.play.download">Ladda ned</b-button></a>
-        </div>
+        <a :href="project.play.download" class="button">
+          <b-button variant="success" :disabled="!project.play.download">Ladda ned</b-button>
+        </a>
+      </div>
       <div style="text-align: center;">
-        <div
-          v-if="project.play"
-          class="playArea"
-          style="margin-left: auto; margin-right: auto;"
-        >
-          <div v-if="project.play.embed">
+        <div v-if="project.play">
+          <div v-if="project.play.embed" class="playArea" style="margin-left: auto; margin-right: auto;">
             <iframe
               ref="playFrame"
               style="overflow: hidden;"
@@ -108,6 +106,7 @@ export default {
 }
 .links {
   padding: 25px;
+  margin-bottom: 30px;
 }
 .info {
   margin-bottom: 30px;

@@ -1,8 +1,7 @@
 <template>
   <div class="container">
     <div v-if="projects">
-      <full-view :big="'Utvalda'" :small="'Uppdateras dagligen'" :projects="projects.slice(0, 4)"></full-view>
-      <full-view :big="'Utforska'" :projects="projects.slice(4)"></full-view>
+      <full-view :big="'Utforska'" :projects="projects"></full-view>
     </div>
   </div>
 </template>
@@ -21,7 +20,7 @@ export default {
   },
   async asyncData({ error }) {
     try {
-      let projects = await getProjects(projectCollection);
+      let projects = await getProjects(projectCollection.orderBy("published", "desc"));
       if (!projects) {
         throw { statusCode: 404 };
       }

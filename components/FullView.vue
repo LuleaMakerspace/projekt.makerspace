@@ -20,7 +20,7 @@ export default {
   data() {
       return {
           page: 1,
-          perPage: 9
+          perPage: 20
       }
   },
   computed: {

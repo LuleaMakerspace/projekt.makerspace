@@ -9,7 +9,7 @@
         <b-collapse is-nav id="nav_collapse">
                 <b-navbar-nav class="ml-auto">
                     <b-nav-item href="https://goo.gl/forms/q8WVHKWDTmqfwRtJ2">Ladda upp</b-nav-item>
-                    <b-nav-form @submit="onSearch">
+                    <b-nav-form @submit="onSearch" style="display: none;" disabled>
                         <b-input-group>
                             <b-form-input size="sm" class="mr-sm-2" type="text" v-model="query" required placeholder="Vad letar du efter?"/>
                             <b-input-group-append>
