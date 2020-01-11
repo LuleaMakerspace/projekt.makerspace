@@ -17,7 +17,7 @@
             <span>{{new Date(project.published.seconds*1000).toLocaleDateString("sv-SV")}}</span>
           </b-col>
           <b-col cols="12" md="6" v-if="project.event">
-            <span class="smallHeader">Gamejam/event</span>
+            <span class="smallHeader">Game jam/event</span>
             <br />
             <span>{{project.event}}</span>
           </b-col>
