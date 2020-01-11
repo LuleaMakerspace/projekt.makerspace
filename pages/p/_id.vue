@@ -8,7 +8,7 @@
             <span class="smallHeader">Skapare</span>
             <br />
             <span>
-              <horizontal-list :list="project.authors"></horizontal-list>
+              <authors :list="project.authors"></authors>
             </span>
           </b-col>
           <b-col cols="12" md="6">
@@ -59,10 +59,10 @@ import { projectCollection } from "~/plugins/firebase.js";
 import { getProject } from "~/services/projectService.js";
 import config from "~/config.json";
 
-import HorizontalList from "~/components/HorizontalList.vue";
+import Authors from "~/components/Authors.vue";
 
 export default {
-  components: { HorizontalList },
+  components: { Authors },
   data() {
     return {
       sizeTemplate: {}
