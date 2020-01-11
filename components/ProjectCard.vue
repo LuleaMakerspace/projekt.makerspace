@@ -7,7 +7,7 @@
         </b-col>
         <b-col style="font-family: brutal;">
           <span>
-            <span>
+            <span style="font-weight: bold;">
               <span v-if="project.download">⤓</span>
               <span v-if="project.embed">►</span>
             </span>
