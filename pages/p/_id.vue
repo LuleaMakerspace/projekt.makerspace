@@ -8,7 +8,7 @@
             <span class="smallHeader">Skapare</span>
             <br />
             <span>
-              <authors :list="project.authors"></authors>
+              <authors :list="project.authors" :limit="7"></authors>
             </span>
           </b-col>
           <b-col cols="12" md="6">
@@ -18,19 +18,18 @@
           </b-col>
         </b-row>
       </div>
-      <div style="background-color: #eaf3ea" v-if="project.play" class="links">
-        <a :href="project.play.download" class="button">
-          <b-button variant="success" :disabled="!project.play.download">Ladda ned</b-button>
+      <div style="background-color: #eaf3ea" v-if="project.download" class="links">
+        <a :href="project.download" class="button">
+          <b-button variant="success">Ladda ned</b-button>
         </a>
       </div>
       <div style="text-align: center;">
-        <div v-if="project.play">
-          <div v-if="project.play.embed" class="playArea" style="margin-left: auto; margin-right: auto;">
+          <div v-if="project.embed" class="playArea" style="margin-left: auto; margin-right: auto;">
             <iframe
               ref="playFrame"
               style="overflow: hidden;"
               allow="fullscreen; autoplay; encrypted-media"
-              :src="project.play.embed"
+              :src="project.embed"
               frameborder="0"
               allowfullscreen="true"
               msallowfullscreen="true"
@@ -43,7 +42,6 @@
             ></iframe>
           </div>
         </div>
-      </div>
     </div>
     <div>
       <span class="smallHeader">Beskrivning</span>

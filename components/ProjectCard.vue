@@ -1,22 +1,4 @@
 <template>
-  <!---<div class="projectcard" style="display: inline-flex">
-    <n-link :to="'/p/' + project.id">
-    <div class="contents">
-      <div class="thumbnail">
-      <img :src="project.image">
-      <div class="playIcons" v-if="project.play" style="font-weight: bold;position: absolute; top: 5px; left: 10px; color: #007bff; font-size: 20px;">
-        <span v-if="project.play.download">⤓</span>
-        <span v-if="project.play.embed">⯈</span>
-      </div>
-      </div>
-      <div class="description">
-        <span id="title">{{project.title}}</span>
-        <br />
-        <span id="authors"><span v-for="author in project.authors" :key="author" class="author">{{author}}<span v-if="author != project.authors[project.authors.length - 1]">,</span></span></span>
-      </div>
-    </div>
-    </n-link>
-  </div>--->
   <div style="margin-bottom: 20px;" class="projectcard">
     <n-link :to="'/p/' + project.id">
       <b-row>
@@ -25,9 +7,9 @@
         </b-col>
         <b-col style="font-family: brutal;">
           <span>
-            <span v-if="project.play">
-              <span v-if="project.play.download">⤓</span>
-              <span v-if="project.play.embed">►</span>
+            <span>
+              <span v-if="project.download">⤓</span>
+              <span v-if="project.embed">►</span>
             </span>
             {{project.title}}
           </span>

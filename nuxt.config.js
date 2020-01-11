@@ -19,6 +19,7 @@ module.exports = {
       }
     ]
   },
+  mode: 'spa',
   /*
   ** Customize the progress bar color
   */
