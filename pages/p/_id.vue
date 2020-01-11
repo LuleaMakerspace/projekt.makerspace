@@ -18,32 +18,39 @@
           </b-col>
         </b-row>
       </div>
-      <div style="background-color: #eaf3ea" v-if="project.download" class="links">
+      <div style="background-color: #eaf3ea" v-if="project.download" class="downloadArea">
         <a :href="project.download" class="button">
-          <b-button variant="success">Ladda ned</b-button>
+          <b-button variant="success" style="border-bottom: solid 3px green;">Ladda ned</b-button>
         </a>
       </div>
-      <div style="text-align: center;">
-          <div v-if="project.embed" class="playArea" style="margin-left: auto; margin-right: auto;">
-            <iframe
-              ref="playFrame"
-              style="overflow: hidden;"
-              allow="fullscreen; autoplay; encrypted-media"
-              :src="project.embed"
-              frameborder="0"
-              allowfullscreen="true"
-              msallowfullscreen="true"
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-              allowpaymentrequest="false"
-              referrerpolicy="unsafe-url"
-              sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups"
-              scrolling="no"
-            ></iframe>
-          </div>
-        </div>
+      <div v-if="project.embed" class="playArea" style="margin-left: auto; margin-right: auto;">
+        <iframe
+          ref="playFrame"
+          style="overflow: hidden;"
+          allow="fullscreen; autoplay; encrypted-media"
+          :src="project.embed"
+          frameborder="0"
+          allowfullscreen="true"
+          msallowfullscreen="true"
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true"
+          allowpaymentrequest="false"
+          referrerpolicy="unsafe-url"
+          sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups"
+          scrolling="no"
+        ></iframe>
+      </div>
     </div>
     <div>
+      <div v-if="project.links">
+        <span class="smallHeader">Länkar</span>
+        <br />
+        <ul>
+          <li v-for="(link, index) in project.links" :key="index">
+            <a :href="project.links[index]">{{project.links[index]}}</a>
+          </li>
+        </ul>
+      </div>
       <span class="smallHeader">Beskrivning</span>
       <br />
       <p>{{project.description}}</p>
@@ -102,7 +109,7 @@ export default {
   top: 0;
   width: 100%;
 }
-.links {
+.downloadArea {
   padding: 25px;
   margin-bottom: 30px;
 }

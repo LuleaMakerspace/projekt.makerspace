@@ -11,7 +11,7 @@
               <span v-if="project.download">⤓</span>
               <span v-if="project.embed">►</span>
             </span>
-            {{project.title}}
+            <span>{{project.title}}</span>
           </span>
           <br />
           <span style="color: rgba(0, 0, 0, 0.7);">
