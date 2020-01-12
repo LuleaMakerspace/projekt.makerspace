@@ -7,9 +7,10 @@
         </b-col>
         <b-col style="font-family: brutal;">
           <span>
-            <span style="font-weight: bold;">
-              <span v-if="project.download">⤓</span>
-              <span v-if="project.embed">►</span>
+            <span>
+              <span v-if="project.download"><i class="fas fa-file-archive"></i></span>
+              <span v-if="project.embed"><i class="fas fa-play"></i></span>
+              <span v-if="project.extern"><i class="fas fa-external-link-square-alt"></i></span>
             </span>
             <span>{{project.title}}</span>
           </span>

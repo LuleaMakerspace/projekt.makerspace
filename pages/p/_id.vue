@@ -23,7 +23,7 @@
           </b-col>
         </b-row>
       </div>
-      <div style="background-color: #eaf3ea" class="downloadArea" v-if="project.download || project.extern">
+      <div :style="'background-color: #eaf3ea;'" class="downloadArea" v-if="project.download || project.extern">
         <a :href="project.download" class="button" v-if="project.download">
           <b-button variant="success" style="border-bottom: solid 3px green;">Ladda ned</b-button>
         </a>
