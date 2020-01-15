@@ -4,16 +4,14 @@
       <b-row>
         <b-col cols="6" md="5" style="height: 100px;">
           <img :src="project.image" style="width: 100%; height: 100%; object-fit: cover;" />
-        </b-col>
-        <b-col style="font-family: brutal;">
-          <span>
-            <span>
+          <span style="position: absolute; color: #b8e994; bottom: 10px; right: 30px; text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.65);">
               <span v-if="project.download"><i class="fas fa-file-archive"></i></span>
               <span v-if="project.embed"><i class="fas fa-play"></i></span>
               <span v-if="project.extern"><i class="fas fa-external-link-square-alt"></i></span>
             </span>
+        </b-col>
+        <b-col style="font-family: brutal;">
             <span>{{project.title}}</span>
-          </span>
           <br />
           <span style="color: rgba(0, 0, 0, 0.7);">
             <authors :list="project.authors"></authors>
