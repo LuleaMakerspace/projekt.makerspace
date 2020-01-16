@@ -31,7 +31,7 @@ export default {
 body {
   background: #f9f9fa;
   font-family: brutal-thin;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .container {

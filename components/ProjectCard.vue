@@ -80,7 +80,7 @@ export default {
 }
 .projectcard:hover {
   .play-icons {
-    color: rgba(62, 255, 0, 1);
+    color: #29ff65;
   }
   background-color: #edf7fa;
 }
