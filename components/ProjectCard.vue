@@ -3,7 +3,7 @@
     <n-link :to="'/p/' + project.id">
       <b-row>
         <b-col cols="6" md="5" style="height: 100px;">
-          <img :src="project.image" style="width: 100%; height: 100%; object-fit: cover;" />
+          <img :src="project.image"/>
           <span class="play-icons">
             <span v-if="project.download">
               <i class="fas fa-file-archive"></i>
@@ -46,11 +46,21 @@ export default {
     color: rgba(62, 255, 0, 0.68);
     bottom: 10px;
     right: 30px;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.65);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.45);
     transition: 0.2s ease-in-out;
-    transition-property: color, transform;
+    transition-property: color, transform, background-color;
     transform-origin: 20 20;
+    * {
+      margin-left: 5px;
+    }
   }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   a {
     color: inherit; /* blue colors for links too */
     text-decoration: inherit;
@@ -62,6 +72,7 @@ export default {
   }
   .title-authors {
     font-family: brutal;
+    margin: 10px 0 10px 0;
     .authors {
       color: rgba(0, 0, 0, 0.7);
     }
@@ -71,5 +82,6 @@ export default {
   .play-icons {
     color: rgba(62, 255, 0, 1);
   }
+  background-color: #edf7fa;
 }
 </style>

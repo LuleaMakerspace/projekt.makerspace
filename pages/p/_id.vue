@@ -25,13 +25,13 @@
       </div>
       <div :style="'background-color: #eaf3ea;'" class="downloadArea" v-if="project.download || project.extern">
         <a :href="project.download" class="button" v-if="project.download">
-          <b-button variant="success" style="border-bottom: solid 3px green;">Ladda ned</b-button>
+          <b-button variant="success" style="border-bottom: solid 3px green;" target="_blank">Ladda ned</b-button>
         </a>
-        <a :href="project.extern" class="button" v-if="project.extern">
+        <a :href="project.extern" class="button" v-if="project.extern" target="_blank">
           <b-button variant="warning" style="border-bottom: solid 3px #bb8a00;">Spela på annan sida</b-button>
         </a>
       </div>
-      <div v-if="project.embed" class="playArea" style="margin-left: auto; margin-right: auto;">
+      <div v-if="project.embed" class="playArea" style="margin-left: auto; margin-right: auto; background-color: #eee;">
         <iframe
           ref="playFrame"
           style="overflow: hidden;"
