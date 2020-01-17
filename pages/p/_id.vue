@@ -60,7 +60,7 @@
           scrolling="no"
         ></iframe>
       </div>
-      <div style="background-color: #f5f5f5; padding: 20px; margin-bottom: 30px;">
+      <div style="margin-bottom: 30px;">
         <span class="smallHeader">Beskrivning</span>
         <br />
         <p>{{project.description}}</p>
@@ -112,7 +112,12 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+
+.info-block {
+  margin-bottom: 30px;
+}
+
 .playArea {
   overflow: hidden;
   position: relative;
