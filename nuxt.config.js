@@ -7,7 +7,8 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Makerspace Projekt' }
+      { hid: 'description', name: 'description', content: 'Spel gjorda i sammanhang med Luleå Makerspace. Hitta favoriter och spela direkt på sidan!' },
+      { name: 'keywords', content: "Makerspace, Luleå Makerspace, Spel, Games, Indie, Projects" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

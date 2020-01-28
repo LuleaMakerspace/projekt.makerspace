@@ -90,14 +90,17 @@ export default {
   },
   head() {
     return {
-      title: "LMS P - " + this.project.title
+      title: this.project.title + " | Luleå Makerspace - Projekt",
+      meta: [
+        { hid: 'description', name: 'description', content: this.project.description }
+      ]
     };
   },
   async asyncData({ params, error }) {
     try {
       let project = await getProject(projectCollection.doc(params.id));
       if (!project) {
-        return error({ statusCode: 404 });
+        return error({ statusCode: 404, message: "Project not found" });
       }
       return { project };
     } catch (e) {
