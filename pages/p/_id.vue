@@ -23,11 +23,7 @@
           </b-col>
         </b-row>
       </div>
-      <div
-        :style="'background-color: #eaf3ea;'"
-        class="downloadArea"
-        v-if="project.download || project.extern"
-      >
+      <div class="action-area" v-if="project.download || project.extern">
         <a :href="project.download" class="button" v-if="project.download">
           <b-button
             variant="success"
@@ -41,7 +37,7 @@
       </div>
       <div
         v-if="project.embed"
-        class="playArea"
+        class="play-area"
         style="margin-left: auto; margin-right: auto; background-color: #eee;"
       >
         <iframe
@@ -66,20 +62,19 @@
         <p>{{project.description}}</p>
       </div>
     </div>
-      <div v-if="project.links && project.links.length > 0">
-        <span class="smallHeader">Länkar</span>
-        <br />
-        <ul>
-          <li v-for="(link, index) in project.links" :key="index">
-            <a :href="project.links[index]">{{project.links[index]}}</a>
-          </li>
-        </ul>
-      </div>
+    <div v-if="project.links && project.links.length > 0">
+      <span class="smallHeader">Länkar</span>
+      <br />
+      <ul>
+        <li v-for="(link, index) in project.links" :key="index">
+          <a :href="project.links[index]">{{project.links[index]}}</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-import projectService from "~/assets/services/projectService";
 import { projectCollection } from "~/plugins/firebase.js";
 import { getProject } from "~/services/projectService.js";
 import config from "~/config.json";
@@ -95,7 +90,7 @@ export default {
   },
   head() {
     return {
-      title: this.project.title
+      title: "LMS P - " + this.project.title
     };
   },
   async asyncData({ params, error }) {
@@ -113,12 +108,11 @@ export default {
 </script>
 
 <style lang="scss">
-
 .info-block {
   margin-bottom: 30px;
 }
 
-.playArea {
+.play-area {
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -126,7 +120,7 @@ export default {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.playArea iframe {
+.play-area iframe {
   border: 0;
   height: 100%;
   left: 0;
@@ -134,9 +128,10 @@ export default {
   top: 0;
   width: 100%;
 }
-.downloadArea {
+.action-area {
   padding: 25px;
   margin-bottom: 30px;
+  background-color: #eaf3ea;
 }
 .info {
   margin-bottom: 30px;

@@ -8,7 +8,6 @@
 
 <script>
 import FullView from "~/components/FullView.vue";
-import projectService from "~/assets/services/projectService";
 import { projectCollection } from "~/plugins/firebase.js";
 import { getProjects } from "~/services/projectService.js";
 

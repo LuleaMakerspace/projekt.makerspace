@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import FullView from "~/components/FullView.vue";
+/*import FullView from "~/components/FullView.vue";
 import projectService from "~/assets/services/projectService";
 
 export default {
@@ -30,5 +30,5 @@ export default {
       } else return [];
     }
   }
-};
+};*/
 </script>

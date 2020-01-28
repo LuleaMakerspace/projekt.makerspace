@@ -1,4 +1,8 @@
-const firebase = require("firebase/app");
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
+import 'firebase/firestore'
+import 'firebase/database'
+
 require("firebase/firestore");
 
 
@@ -17,6 +21,11 @@ if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig)
 }
 
-export const db = firebase.firestore()
+export const GoogleProvider = new firebase.auth.GoogleAuthProvider()
+export const auth = firebase.auth()
+export const DB = firebase.database()
+export const StoreDB = firebase.firestore()
 
-export const projectCollection = db.collection("projects")
+export const projectCollection = StoreDB.collection("projects")
+
+export default firebase
