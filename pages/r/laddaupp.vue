@@ -20,7 +20,7 @@
           <li>Alla personer som har arbetat på spelet ska ge tillåtelse till att programvaran får publiceras</li>
           <li>Spelet måste gå att spela <b>gratis</b>, extra köp i programvara är ej tillåtet (dvs. inga microtransactions)</li>
           <li>Spelet får inte bestå av extremt innehåll</li>
-          <li>Det är du som laddar upp spelet som har ansvar för programvaran</li>
+          <li>Det är du som laddar upp spelet som bär ansvaret för programvaran</li>
         </ul>
       </div>
       <div class="section">
