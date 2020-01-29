@@ -1,29 +1,27 @@
 <template>
   <div class="container">
     <div v-if="project">
-      <h1 style="font-family: brutal;">{{project.title}}</h1>
-      <div class="info">
+      <h1>{{project.title}}</h1>
+      <div class="section">
         <b-row>
           <b-col cols="12" md="6">
-            <span class="smallHeader">Skapare</span>
+            <b>Skapare</b>
             <br />
-            <span>
-              <authors :list="project.authors" :limit="7"></authors>
-            </span>
+            <authors :list="project.authors" :limit="7"></authors>
           </b-col>
           <b-col cols="12" md="6">
-            <span class="smallHeader">Upplagd</span>
+            <b>Upplagd</b>
             <br />
             <span>{{new Date(project.published.seconds*1000).toLocaleDateString("sv-SV")}}</span>
           </b-col>
           <b-col cols="12" md="6" v-if="project.event">
-            <span class="smallHeader">Game jam/event</span>
+            <b>Game jam/event</b>
             <br />
             <span>{{project.event}}</span>
           </b-col>
         </b-row>
       </div>
-      <div class="action-area" v-if="project.download || project.extern">
+      <div class="section-highlight section" v-if="project.download || project.extern">
         <a :href="project.download" class="button" v-if="project.download">
           <b-button
             variant="success"
@@ -35,11 +33,7 @@
           <b-button variant="warning" style="border-bottom: solid 3px #bb8a00;">Spela på annan sida</b-button>
         </a>
       </div>
-      <div
-        v-if="project.embed"
-        class="play-area"
-        style="margin-left: auto; margin-right: auto; background-color: #eee;"
-      >
+      <div v-if="project.embed" class="play-area section" style="margin-left: auto; margin-right: auto; background-color: #eee;" >
         <iframe
           ref="playFrame"
           style="overflow: hidden;"
@@ -56,14 +50,14 @@
           scrolling="no"
         ></iframe>
       </div>
-      <div style="margin-bottom: 30px;">
-        <span class="smallHeader">Beskrivning</span>
+      <div class="section">
+        <b>Beskrivning</b>
         <br />
         <p>{{project.description}}</p>
       </div>
     </div>
-    <div v-if="project.links && project.links.length > 0">
-      <span class="smallHeader">Länkar</span>
+    <div v-if="project.links && project.links.length > 0" class="section">
+      <b>Länkar</b>
       <br />
       <ul>
         <li v-for="(link, index) in project.links" :key="index">
@@ -77,7 +71,6 @@
 <script>
 import { projectCollection } from "~/plugins/firebase.js";
 import { getProject } from "~/services/projectService.js";
-import config from "~/config.json";
 
 import Authors from "~/components/Authors.vue";
 
@@ -111,10 +104,6 @@ export default {
 </script>
 
 <style lang="scss">
-.info-block {
-  margin-bottom: 30px;
-}
-
 .play-area {
   overflow: hidden;
   position: relative;
@@ -135,8 +124,5 @@ export default {
   padding: 25px;
   margin-bottom: 30px;
   background-color: #eaf3ea;
-}
-.info {
-  margin-bottom: 30px;
 }
 </style>

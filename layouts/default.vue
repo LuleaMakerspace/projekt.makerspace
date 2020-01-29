@@ -16,22 +16,27 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss">
 @font-face {
   font-family: brutal;
   src: url(~assets/fonts/brutal/brutal.woff2);
+  font-weight: bold;
 }
 
 @font-face {
-  font-family: brutal-thin;
+  font-family: brutal;
   src: url(~assets/fonts/brutal/brutal2.woff2);
+  font-weight: normal;
 }
 
-
 body {
-  background: #f9f9fa;
-  font-family: brutal-thin;
+  background: #f7f7f7;
+  font-family: brutal;
   margin-bottom: 60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
 }
 
 .container {
@@ -39,7 +44,16 @@ body {
   padding-bottom: 10px;
 }
 
-.smallHeader {
+.section {
+  margin-bottom: 30px;
+}
+
+.section-highlight {
+  background-color: #77aeff0d;
+  padding: 25px;
+}
+
+.bold {
   font-family: brutal !important;
 }
 

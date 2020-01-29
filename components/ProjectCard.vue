@@ -82,6 +82,7 @@ export default {
     padding: 10px;
     
     font-family: brutal;
+    font-weight: bold;
     .authors {
       color: rgba(0, 0, 0, 0.7);
       white-space: normal;
