@@ -9,7 +9,7 @@
         <h2>Tänk på att...</h2>
         <ul>
           <li>Beskrivningen av spelet ska vara relativt kort, helst mindre än 100 ord</li>
-          <li>För miniatyrbilden av spelet använd en hemsida som <a href="https://imgur.com">Imgur</a> för att lägga upp bilden på, tänk på att göra bilden synlig för alla och inte bara dig</li>
+          <li>För miniatyrbilden av spelet använd en hemsida som <a href="https://imgur.com">Imgur</a> för att lägga upp bilden på, tänk på att göra bilden synlig för alla och inte bara för dig</li>
           <li>Miniatyrbilden rekommenderas ha sidförhållande 16:9, men andra liknande sidförhållanden fungerar också; delar av bilden kan bli bortklippta genom att använda ett annat sidförhållande</li>
           <li>Använd helst en screenshot från spelet som miniatyrbild</li>
         </ul>
@@ -29,9 +29,7 @@
           Så välj ett projekt som du är nöjd med och som du har finslipat lite på, <b>men tänk på att de största spelen inte alltid är dem bästa</b>. Många kan komma att uppskatta ett litet
           men välpolerat spel mycket mer än ett tappert försök att återskapa GTA V på sin egen hand.
         </p>
-        <p>Tänk också på att om du är ny till spelutveckling så kan det kännas frestande att ladda upp ditt första spel, gör några stycken; lek runt med spel idéer tills du skapar något som du
-          kan känna dig stolt över, och som du vill dela med dig av. Du kommer alltid ha lärt dig något nytt till nästa spel.
-        </p>
+        <p>Dela gärna med dig av spel du skapat på diverse game jams, glöm bara inte att skriva vilket game jam när du laddar upp spelet.</p>
       </div>
       <a href="https://forms.gle/kFHMRyrgkB6LjjtFA" class="button">
           <b-button
