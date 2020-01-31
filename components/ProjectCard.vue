@@ -64,8 +64,6 @@ export default {
   .play-icons {
     color: rgba(64, 255, 0, 0.815);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
-    transition: 0.2s ease-in-out;
-    transition-property: color, background-color;
     -webkit-text-stroke: 2px black;
     * {
       margin-right: 5px;
@@ -77,6 +75,8 @@ export default {
     height: 100%;
     object-fit: cover;
     border-radius: 3px;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.200);
   }
 
   a {
@@ -101,7 +101,5 @@ export default {
       color: rgba(0, 0, 0, 0.7);
     }
   }
-}
-.projectcard:hover {
 }
 </style>
