@@ -1,5 +1,6 @@
 <template>
   <div class="horizontal-scroll-view">
+    <i class="fas fa-angle-right" style="margin-right: 10px;"></i>
     <project-card v-for="(project, index) in projects" :key="project" :project="projects[index]"></project-card>
   </div>
 </template>
