@@ -1,7 +1,5 @@
 <template>
-    <div>
         <span>{{listToString()}}</span>
-    </div>
 </template>
 
 <script>

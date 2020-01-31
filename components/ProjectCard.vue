@@ -8,17 +8,31 @@
         <b-col class="title-authors card-half">
           <span>{{project.title}}</span>
           <br />
-          <span class="authors">
-            <authors :list="project.authors"></authors>
-          </span>
-          <span class="play-icons">
-            <span v-if="project.recommended" v-b-tooltip.hover title="Kvalitetsstämpel" style="color: #e55039">
+          <authors :list="project.authors"></authors>
+          <br />
+          <span class="play-icons" style="margin-left: 2px;">
+            <span
+              v-if="project.recommended"
+              v-b-tooltip.hover
+              title="Kvalitetsstämpel"
+              style="color: #e55039"
+            >
               <i class="fas fa-heart"></i>
             </span>
-            <span v-if="project.download" v-b-tooltip.hover title="Kan spelas genom nedladdning av spelfiler" style="color: #4bcffa">
+            <span
+              v-if="project.download"
+              v-b-tooltip.hover
+              title="Kan spelas genom nedladdning av spelfiler"
+              style="color: #4bcffa"
+            >
               <i class="fas fa-folder"></i>
             </span>
-            <span v-if="project.extern" v-b-tooltip.hover title="Kan spelas på extern hemsida" style="color: #fad390">
+            <span
+              v-if="project.extern"
+              v-b-tooltip.hover
+              title="Kan spelas på extern hemsida"
+              style="color: #fad390"
+            >
               <i class="fas fa-share"></i>
             </span>
             <span v-if="project.embed" v-b-tooltip.hover title="Kan spelas direkt på hemsidan">
@@ -80,7 +94,7 @@ export default {
     text-overflow: ellipsis;
     overflow: hidden;
     padding: 10px;
-    
+
     font-family: brutal;
     font-weight: bold;
     .authors {
