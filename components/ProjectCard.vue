@@ -4,6 +4,13 @@
       <b-row>
         <b-col cols="6" md="5" class="card-half">
           <img :src="project.image" />
+        </b-col>
+        <b-col class="title-authors card-half">
+          <span>{{project.title}}</span>
+          <br />
+          <span class="authors">
+            <authors :list="project.authors"></authors>
+          </span>
           <span class="play-icons">
             <span v-if="project.recommended" v-b-tooltip.hover title="Kvalitetsstämpel" style="color: #e55039">
               <i class="fas fa-heart"></i>
@@ -17,13 +24,6 @@
             <span v-if="project.embed" v-b-tooltip.hover title="Kan spelas direkt på hemsidan">
               <i class="fas fa-play"></i>
             </span>
-          </span>
-        </b-col>
-        <b-col class="title-authors card-half">
-          <span>{{project.title}}</span>
-          <br />
-          <span class="authors">
-            <authors :list="project.authors"></authors>
           </span>
         </b-col>
       </b-row>
@@ -48,17 +48,13 @@ export default {
     height: 100px;
   }
   .play-icons {
-    position: absolute;
     color: rgba(64, 255, 0, 0.815);
-    bottom: 10px;
-    right: 30px;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
     transition: 0.2s ease-in-out;
-    transition-property: color, transform, background-color;
-    transform-origin: 20 20;
+    transition-property: color, background-color;
     -webkit-text-stroke: 2px black;
     * {
-      margin-left: 5px;
+      margin-right: 5px;
     }
   }
 
@@ -66,6 +62,7 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 3px;
   }
 
   a {
@@ -88,7 +85,6 @@ export default {
     font-weight: bold;
     .authors {
       color: rgba(0, 0, 0, 0.7);
-      white-space: normal;
     }
   }
 }
