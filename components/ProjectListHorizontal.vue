@@ -23,7 +23,7 @@ export default {
   overflow-y: hidden;
   white-space: nowrap;
   .projectcard {
-    width: 100%;
+    width: calc(100% - 10px);
     max-width: 400px;
     margin-right: 30px;
     display: inline-block;
