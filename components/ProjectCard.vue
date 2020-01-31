@@ -11,19 +11,14 @@
           <authors :list="project.authors" class="authors"></authors>
           <br />
           <span class="play-icons" style="margin-left: 2px;">
-            <span
-              v-if="project.recommended"
-              v-b-tooltip.hover
-              title="Kvalitetsstämpel"
-              style="color: #e55039"
-            >
-              <i class="fas fa-heart"></i>
+            <span v-if="project.embed" v-b-tooltip.hover title="Spela här">
+              <i class="fas fa-play"></i>
             </span>
             <span
               v-if="project.download"
               v-b-tooltip.hover
               title="Kan spelas genom nedladdning av spelfiler"
-              style="color: #4bcffa"
+              style="color: #64d3f7"
             >
               <i class="fas fa-folder"></i>
             </span>
@@ -35,8 +30,13 @@
             >
               <i class="fas fa-share"></i>
             </span>
-            <span v-if="project.embed" v-b-tooltip.hover title="Kan spelas direkt på hemsidan">
-              <i class="fas fa-play"></i>
+            <span
+              v-if="project.recommended"
+              v-b-tooltip.hover
+              title="Kvalitetsstämpel"
+              style="color: #e55039"
+            >
+              <i class="fas fa-heart"></i>
             </span>
           </span>
         </b-col>
