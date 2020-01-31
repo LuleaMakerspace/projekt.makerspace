@@ -9,14 +9,7 @@
         <b-collapse is-nav id="nav_collapse">
                 <b-navbar-nav class="ml-auto">
                     <b-nav-item ><nuxt-link to="/r/laddaupp">Ladda upp ditt projekt</nuxt-link></b-nav-item>
-                    <b-nav-form @submit="onSearch" style="display: none;" disabled>
-                        <b-input-group>
-                            <b-form-input size="sm" class="mr-sm-2" type="text" v-model="query" required placeholder="Vad letar du efter?"/>
-                            <b-input-group-append>
-                                <b-button size="sm" class="my-2 my-sm-0" type="submit" style="margin-top: 0px !important">Sök</b-button>
-                            </b-input-group-append>
-                        </b-input-group>
-                    </b-nav-form>
+                    <b-nav-item ><nuxt-link to="/r/ed">Skapa egna spel</nuxt-link></b-nav-item>
                 </b-navbar-nav>
         </b-collapse>
         </b-navbar>
