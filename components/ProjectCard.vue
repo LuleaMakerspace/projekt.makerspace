@@ -8,7 +8,7 @@
         <b-col class="title-authors card-half">
           <span>{{project.title}}</span>
           <br />
-          <authors :list="project.authors"></authors>
+          <authors :list="project.authors" class="authors"></authors>
           <br />
           <span class="play-icons" style="margin-left: 2px;">
             <span
