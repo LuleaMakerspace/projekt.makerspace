@@ -5,14 +5,17 @@
         <b-col cols="6" md="5" class="card-half">
           <img :src="project.image" />
           <span class="play-icons">
-            <span v-if="project.download" v-b-tooltip.hover title="Kan spelas genom nedladdning av spelfiler.">
+            <span v-if="project.recommended" v-b-tooltip.hover title="Kvalitetsstämpel" style="color: #e55039">
+              <i class="fas fa-heart"></i>
+            </span>
+            <span v-if="project.download" v-b-tooltip.hover title="Kan spelas genom nedladdning av spelfiler" style="color: #4bcffa">
               <i class="fas fa-folder"></i>
             </span>
-            <span v-if="project.embed" v-b-tooltip.hover title="Kan spelas direkt på hemsidan.">
-              <i class="fas fa-play"></i>
-            </span>
-            <span v-if="project.extern" v-b-tooltip.hover title="Kan spelas på extern hemsida.">
+            <span v-if="project.extern" v-b-tooltip.hover title="Kan spelas på extern hemsida" style="color: #fad390">
               <i class="fas fa-share"></i>
+            </span>
+            <span v-if="project.embed" v-b-tooltip.hover title="Kan spelas direkt på hemsidan">
+              <i class="fas fa-play"></i>
             </span>
           </span>
         </b-col>
