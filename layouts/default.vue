@@ -46,7 +46,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .section {
   margin-bottom: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+.section > :last-child { margin-bottom: 0; }
 
 .section-highlight {
   background-color: #77aeff0d;

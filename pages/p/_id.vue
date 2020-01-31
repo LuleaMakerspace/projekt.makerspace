@@ -33,7 +33,11 @@
           <b-button variant="warning" style="border-bottom: solid 3px #bb8a00;">Spela på annan sida</b-button>
         </a>
       </div>
-      <div v-if="project.embed" class="play-area section" style="margin-left: auto; margin-right: auto; background-color: #eee;" >
+      <div
+        v-if="project.embed"
+        class="play-area section"
+        style="margin-left: auto; margin-right: auto; background-color: #eee;"
+      >
         <iframe
           ref="playFrame"
           style="overflow: hidden;"
@@ -51,19 +55,23 @@
         ></iframe>
       </div>
       <div class="section">
-        <b>Beskrivning</b>
-        <br />
-        <p>{{project.description}}</p>
+        <b-row>
+          <b-col cols="12" md="6">
+            <b>Beskrivning</b>
+            <br />
+            <p>{{project.description}}</p>
+          </b-col>
+          <b-col v-if="project.links && project.links.length > 0" cols="12" md="6">
+            <b>Länkar</b>
+            <br />
+            <ul>
+              <li v-for="(link, index) in project.links" :key="index">
+                <a :href="project.links[index]">{{project.links[index]}}</a>
+              </li>
+            </ul>
+          </b-col>
+        </b-row>
       </div>
-    </div>
-    <div v-if="project.links && project.links.length > 0" class="section">
-      <b>Länkar</b>
-      <br />
-      <ul>
-        <li v-for="(link, index) in project.links" :key="index">
-          <a :href="project.links[index]">{{project.links[index]}}</a>
-        </li>
-      </ul>
     </div>
   </div>
 </template>
@@ -85,7 +93,11 @@ export default {
     return {
       title: this.project.title + " | Luleå Makerspace - Projekt",
       meta: [
-        { hid: 'description', name: 'description', content: this.project.description }
+        {
+          hid: "description",
+          name: "description",
+          content: this.project.description
+        }
       ]
     };
   },
