@@ -17,7 +17,7 @@
             <span
               v-if="project.download"
               v-b-tooltip.hover
-              title="Kan spelas genom nedladdning av spelfiler"
+              title="Nedladdning tillgänglig"
               style="color: #64d3f7"
             >
               <i class="fas fa-folder"></i>
