@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 .section-highlight {
   background-color: #77aeff0d;
   padding: 25px;
+  border-radius: 3px;
 }
 
 </style>

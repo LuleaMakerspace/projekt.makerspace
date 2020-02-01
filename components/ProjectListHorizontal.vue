@@ -31,7 +31,7 @@ export default {
 }
   .horizontal-scroll-view::-webkit-scrollbar {
   width: 1em;
-  height: 10px;
+  height: 7px;
 }
  
 .horizontal-scroll-view::-webkit-scrollbar-track {
