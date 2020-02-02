@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 @font-face {
   font-family: brutal;
   src: url(~assets/fonts/brutal/brutal.woff2);

@@ -1,16 +1,20 @@
 <template>
   <div style="margin-bottom: 20px;" class="projectcard">
-    <n-link :to="'/p/' + project.id">
       <b-row>
         <b-col cols="6" md="5" class="card-half">
+          <n-link :to="'/p/' + project.id">
           <img :src="project.image" />
+          </n-link>
         </b-col>
         <b-col class="title-authors card-half">
+          <n-link :to="'/p/' + project.id">
           <span>{{project.title}}</span>
+          </n-link>
           <br />
           <authors :list="project.authors" class="authors"></authors>
           <br />
-          <span class="play-icons" style="margin-left: 2px;">
+          <n-link :to="'/p/' + project.id + '#play-options'">
+          <div class="play-icons" style="margin-left: 2px;">
             <span v-if="project.embed" v-b-tooltip.hover title="Spela här">
               <i class="fas fa-play"></i>
             </span>
@@ -38,10 +42,10 @@
             >
               <i class="fas fa-heart"></i>
             </span>
-          </span>
+          </div>
+            </n-link>
         </b-col>
       </b-row>
-    </n-link>
   </div>
 </template>
 
@@ -62,7 +66,7 @@ export default {
     height: 100px;
   }
   .play-icons {
-    color: rgba(64, 255, 0, 0.815);
+    color: #71ff42;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
     -webkit-text-stroke: 2px black;
     * {

@@ -21,7 +21,7 @@
           </b-col>
         </b-row>
       </div>
-      <div class="section-highlight section" v-if="project.download || project.extern">
+      <div class="section-highlight section" v-if="project.download || project.extern" id="play-options">
         <a :href="project.download" class="button" v-if="project.download">
           <b-button
             variant="success"
