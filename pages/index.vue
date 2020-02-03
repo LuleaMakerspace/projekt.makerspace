@@ -6,19 +6,19 @@
     <div class="container">
       <div class="section section-highlight" v-if="recommended">
         <p>
-          <b>Rekommenderade spel</b>
+          <b>Rekommenderade spel ({{recommended.length}})</b>
         </p>
         <project-list-horizontal :projects="recommended"></project-list-horizontal>
       </div>
       <div class="section section-highlight" v-if="newArrivals">
         <p>
-          <b>Nya släpp</b>
+          <b>Nya släpp ({{newArrivals.length}})</b>
         </p>
         <project-list-horizontal :projects="newArrivals"></project-list-horizontal>
       </div>
       <div class="section">
         <p>
-          <b>Sorterat i alfabetisk ordning</b>
+          <b>Sorterat i alfabetisk ordning ({{projects.length}})</b>
         </p>
         <project-list :projects="projects"></project-list>
       </div>
