@@ -30,6 +30,10 @@ export default {
   font-weight: normal;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
+
 body {
   background: #f7f7f7;
   font-family: brutal;
@@ -37,7 +41,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'brutal', sans-serif;
 }
 
 .container {
@@ -56,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 .section-highlight {
   background-color: #77aeff0d;
   padding: 25px;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 
 </style>

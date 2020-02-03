@@ -9,7 +9,7 @@
         <h2>Tänk på att...</h2>
         <ul>
           <li>Beskrivningen av spelet ska vara relativt kort, helst mindre än 100 ord</li>
-          <li>För miniatyrbilden av spelet använd en hemsida som <a href="https://imgur.com">Imgur</a> för att lägga upp bilden på, tänk på att göra bilden synlig för alla och inte bara för dig</li>
+          <li>För miniatyrbilden av spelet kan du använda en hemsida som <a href="https://imgur.com">Imgur</a> för att lägga upp bilden på, tänk på att göra bilden synlig för alla och inte bara för dig. Annars kan du också ladda upp en bild direkt från formuläret genom Google Drive.</li>
           <li>Miniatyrbilden rekommenderas ha sidförhållande 16:9, men andra liknande sidförhållanden fungerar också; delar av bilden kan bli bortklippta genom att använda ett annat sidförhållande</li>
           <li>Använd helst en screenshot från spelet som miniatyrbild</li>
         </ul>
