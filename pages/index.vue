@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div style="background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(252,150,120,1) 0%, rgba(247,108,127,1) 100.4% ); color: white; text-align: center;">
     <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
-      <h1>Spel, Luleå Makerspace</h1>
-    </div>
+      <h1 style="font-size: 3.5em;">Spel, Luleå Makerspace</h1>
     </div>
     <div class="container">
       <div class="section section-highlight" v-if="recommended">
