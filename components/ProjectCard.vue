@@ -66,7 +66,7 @@ export default {
     height: 100px;
   }
   .play-icons {
-    color: #71ff42;
+    color: #6aef3f;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
     -webkit-text-stroke: 2px black;
     * {
