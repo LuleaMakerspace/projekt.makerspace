@@ -50,6 +50,7 @@
           webkitallowfullscreen="true"
           allowpaymentrequest="false"
           referrerpolicy="unsafe-url"
+          SameSite=None
           sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups"
           scrolling="no"
         ></iframe>
@@ -72,18 +73,24 @@
           </b-col>
         </b-row>
       </div>
+      <div class="section section-highlight" v-if="related.length > 0">
+        <p>
+          <b>Relaterat ({{related.length}})</b>
+        </p>
+        <project-list :projects="related"></project-list>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import { projectCollection } from "~/plugins/firebase.js";
-import { getProject } from "~/services/projectService.js";
-
+import { getProject, getProjects } from "~/services/projectService.js";
+import ProjectList from "~/components/ProjectList.vue";
 import Authors from "~/components/Authors.vue";
 
 export default {
-  components: { Authors },
+  components: { Authors, ProjectList },
   data() {
     return {
       sizeTemplate: {}
@@ -107,7 +114,9 @@ export default {
       if (!project) {
         return error({ statusCode: 404, message: "Project not found" });
       }
-      return { project };
+      let related = await getProjects(projectCollection.where('authors', 'array-contains-any', project.authors))
+      
+      return { project, related: related.filter(x => x.id != project.id) };
     } catch (e) {
       return error(e);
     }

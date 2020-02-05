@@ -7,7 +7,7 @@
   flex-direction: column;">
           <h1 style="font-size: 3.5em;" class="section">Spel, Luleå Makerspace</h1>
         </b-col>
-        <b-col cols="12" lg="6" class="section-highlight">
+        <b-col cols="12" lg="6" class="section-highlight" v-if="recommended.length > 0">
           <project-card :project="recommended[0]"></project-card>
           <div>
             <i class="fas fa-quote-left"></i>
