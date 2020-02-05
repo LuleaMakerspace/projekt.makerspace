@@ -21,7 +21,11 @@
           </b-col>
         </b-row>
       </div>
-      <div class="section-highlight section" v-if="project.download || project.extern" id="play-options">
+      <div
+        class="section-highlight section"
+        v-if="project.download || project.extern"
+        id="play-options"
+      >
         <a :href="project.download" class="button" v-if="project.download">
           <b-button
             variant="success"
@@ -50,7 +54,7 @@
           webkitallowfullscreen="true"
           allowpaymentrequest="false"
           referrerpolicy="unsafe-url"
-          SameSite=None
+          SameSite="None"
           sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups"
           scrolling="no"
         ></iframe>
@@ -114,8 +118,14 @@ export default {
       if (!project) {
         return error({ statusCode: 404, message: "Project not found" });
       }
-      let related = await getProjects(projectCollection.where('authors', 'array-contains-any', project.authors))
-      
+      let related = await getProjects(
+        projectCollection.where(
+          "authors",
+          "array-contains-any",
+          project.authors
+        )
+      );
+
       return { project, related: related.filter(x => x.id != project.id) };
     } catch (e) {
       return error(e);
