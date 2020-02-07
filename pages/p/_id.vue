@@ -123,7 +123,7 @@ export default {
           "authors",
           "array-contains-any",
           project.authors
-        )
+        ).limit(15)
       );
 
       return { project, related: related.filter(x => x.id != project.id) };
