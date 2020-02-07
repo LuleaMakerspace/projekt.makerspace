@@ -59,6 +59,11 @@
           scrolling="no"
         ></iframe>
       </div>
+      <div class="section section-highlight" v-if="project.tutorial">
+        <b>Hur man spelar</b>
+        <br/>
+        {{project.tutorial}}
+      </div>
       <div class="section">
         <b-row>
           <b-col cols="12" md="6">
