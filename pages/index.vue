@@ -5,7 +5,7 @@
         <b-col cols="12" lg="6" style="display: flex;
   justify-content: center;
   flex-direction: column;" class="section">
-          <h1 style="font-size: 3.5em;">Lokalproducerat</h1>
+          <h1 style="font-size: 3.5em;">Våra spel</h1>
           <h2>Luleå Makerspace</h2>
         </b-col>
         <b-col cols="12" lg="6" class="section-highlight" v-if="recommended.length > 0">
@@ -34,7 +34,7 @@
       </div>
       <div class="section">
         <p>
-          <b>Alla spel, sorterat i alfabetisk ordning ({{projects.length}})</b>
+          <b><i class="fas fa-sort-alpha-down"></i> Alla spel ({{projects.length}})</b>
         </p>
         <project-list :projects="projects"></project-list>
       </div>

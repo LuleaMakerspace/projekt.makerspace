@@ -79,7 +79,7 @@
       </div>
       <div class="section section-highlight" v-if="related.length > 0">
         <p>
-          <b>Relaterat ({{related.length}})</b>
+          <b><i class="fas fa-link"></i> Relaterat ({{related.length}})</b>
         </p>
         <project-list :projects="related"></project-list>
       </div>
