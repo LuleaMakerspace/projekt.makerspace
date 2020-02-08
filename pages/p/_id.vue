@@ -3,6 +3,8 @@
     <div v-if="project">
       <h1>{{project.title}}</h1>
       <div class="section">
+        
+        <b v-if="project.recommended"><i class="fas fa-certificate"></i> <i>Redaktörernas val</i></b>
         <b-row>
           <b-col cols="12" md="6">
             <b>Skapare</b>
