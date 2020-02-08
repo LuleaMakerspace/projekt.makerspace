@@ -59,6 +59,10 @@ h6 {
   text-overflow: ellipsis;
 }
 
+.dark-btn {
+  border-bottom: solid 3px #232323;
+}
+
 .section > :last-child {
   margin-bottom: 0;
 }

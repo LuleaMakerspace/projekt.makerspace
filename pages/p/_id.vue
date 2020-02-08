@@ -28,13 +28,13 @@
       >
         <a :href="project.download" class="button" v-if="project.download">
           <b-button
-            variant="success"
-            style="border-bottom: solid 3px green;"
+            variant="dark"
+            class="dark-btn"
             target="_blank"
           >Ladda ned</b-button>
         </a>
         <a :href="project.extern" class="button" v-if="project.extern" target="_blank">
-          <b-button variant="warning" style="border-bottom: solid 3px #bb8a00;">Spela på annan sida</b-button>
+          <b-button variant="dark" class="dark-btn">Spela på annan sida</b-button>
         </a>
       </div>
       <div
