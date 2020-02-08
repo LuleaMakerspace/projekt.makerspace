@@ -8,7 +8,8 @@
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
         <b-collapse is-nav id="nav_collapse">
                 <b-navbar-nav class="ml-auto">
-                    <b-nav-item ><nuxt-link to="/r/laddaupp">Ladda upp ditt projekt</nuxt-link></b-nav-item>
+                    <b-nav-item href="http://www.luleamakerspace.se/?page_id=13">Bli medlem</b-nav-item>
+                    <b-nav-item to="/r/laddaupp">Ladda upp ditt projekt</b-nav-item>
                     <b-nav-form @submit="onSearch" style="display: none;" disabled>
                         <b-input-group>
                             <b-form-input size="sm" class="mr-sm-2" type="text" v-model="query" required placeholder="Vad letar du efter?"/>
