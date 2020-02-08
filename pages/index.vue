@@ -11,10 +11,12 @@
         <b-col cols="12" lg="6" class="section-highlight" v-if="recommended.length > 0">
           <project-card :project="recommended[0]"></project-card>
           <div>
+            <i>
             <i class="fas fa-quote-left"></i>
             <span v-if="recommended[0].comment">{{recommended[0].comment}}</span>
             <span v-else>{{recommended[0].description}}</span>
             <i class="fas fa-quote-right"></i>
+            </i>
           </div>
         </b-col>
       </b-row>
