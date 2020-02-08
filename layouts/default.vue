@@ -61,6 +61,7 @@ h6 {
 
 .dark-btn {
   border-bottom: solid 3px #232323;
+  font-weight: bold;
 }
 
 .section > :last-child {
