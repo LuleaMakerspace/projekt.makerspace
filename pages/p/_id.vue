@@ -4,7 +4,7 @@
       <h1>{{project.title}}</h1>
       <div class="section">
         
-        <b v-if="project.recommended"><i class="fas fa-certificate"></i> <i>Redaktörernas val</i></b>
+        <b v-if="project.recommended"><i class="fas fa-certificate"></i> Redaktörernas val</b>
         <b-row>
           <b-col cols="12" md="6">
             <b>Skapare</b>
@@ -91,6 +91,7 @@
         <project-list :projects="related"></project-list>
       </div>
     </div>
+    <div id="replybox"></div>
   </div>
 </template>
 
@@ -105,6 +106,11 @@ export default {
   data() {
     return {
       sizeTemplate: {}
+    };
+  },
+  created() {
+    window.replybox = {
+      site: 'dqQRz5lBNp', 
     };
   },
   head() {
