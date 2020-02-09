@@ -3,8 +3,9 @@
     <div v-if="project">
       <h1>{{project.title}}</h1>
       <div class="section">
-        
-        <b v-if="project.recommended"><i class="fas fa-certificate"></i> Redaktörernas val</b>
+        <b v-if="project.recommended">
+          <i class="fas fa-certificate"></i> Redaktörernas val
+        </b>
         <b-row>
           <b-col cols="12" md="6">
             <b>Skapare</b>
@@ -29,11 +30,7 @@
         id="play-options"
       >
         <a :href="project.download" class="button" v-if="project.download">
-          <b-button
-            variant="dark"
-            class="dark-btn"
-            target="_blank"
-          >Ladda ned</b-button>
+          <b-button variant="dark" class="dark-btn" target="_blank">Ladda ned</b-button>
         </a>
         <a :href="project.extern" class="button" v-if="project.extern" target="_blank">
           <b-button variant="dark" class="dark-btn">Spela på annan sida</b-button>
@@ -63,7 +60,7 @@
       </div>
       <div class="section section-highlight" v-if="project.tutorial">
         <b>Hur man spelar</b>
-        <br/>
+        <br />
         {{project.tutorial}}
       </div>
       <div class="section">
@@ -86,12 +83,21 @@
       </div>
       <div class="section section-highlight" v-if="related.length > 0">
         <p>
-          <b><i class="fas fa-link"></i> Relaterat ({{related.length}})</b>
+          <b>
+            <i class="fas fa-link"></i>
+            Relaterat ({{related.length}})
+          </b>
         </p>
         <project-list :projects="related"></project-list>
       </div>
     </div>
-    <div id="replybox"></div>
+    <div id="disqus_thread"></div>
+    <noscript>
+      Please enable JavaScript to view the
+      <a
+        href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a>
+    </noscript>
   </div>
 </template>
 
@@ -105,12 +111,11 @@ export default {
   components: { Authors, ProjectList },
   data() {
     return {
-      sizeTemplate: {}
     };
   },
   created() {
     window.replybox = {
-      site: 'dqQRz5lBNp', 
+      site: "dqQRz5lBNp"
     };
   },
   head() {
@@ -125,6 +130,20 @@ export default {
       ]
     };
   },
+  mounted() {
+    var disqus_config = function () {
+    this.page.url = "/p/" + project.id;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = project.id; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+  (function() {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement("script");
+    s.src = "https://lulea-makerspace-projekt.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  },
   async asyncData({ params, error }) {
     try {
       let project = await getProject(projectCollection.doc(params.id));
@@ -132,11 +151,9 @@ export default {
         return error({ statusCode: 404, message: "Project not found" });
       }
       let related = await getProjects(
-        projectCollection.where(
-          "authors",
-          "array-contains-any",
-          project.authors
-        ).limit(15)
+        projectCollection
+          .where("authors", "array-contains-any", project.authors)
+          .limit(15)
       );
 
       return { project, related: related.filter(x => x.id != project.id) };
