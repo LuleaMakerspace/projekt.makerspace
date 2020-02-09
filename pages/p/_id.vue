@@ -30,10 +30,10 @@
         id="play-options"
       >
         <a :href="project.download" class="button" v-if="project.download">
-          <b-button variant="dark" class="dark-btn" target="_blank">Ladda ned</b-button>
+          <b-button variant="dark" class="dark-btn" target="_blank"><i class="fas fa-folder"></i> Ladda ned</b-button>
         </a>
         <a :href="project.extern" class="button" v-if="project.extern" target="_blank">
-          <b-button variant="dark" class="dark-btn">Spela på annan sida</b-button>
+          <b-button variant="dark" class="dark-btn"><i class="fas fa-share"></i> Spela på annan sida</b-button>
         </a>
       </div>
       <div
