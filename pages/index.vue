@@ -52,7 +52,7 @@ import ProjectListHorizontal from "~/components/ProjectListHorizontal.vue";
 import ProjectList from "~/components/ProjectList.vue";
 import ProjectCard from "~/components/ProjectCard.vue";
 
-import { projectCollection } from "~/plugins/firebase.js";
+import { projectCollection, auth } from "~/plugins/firebase.js";
 import { getProjects } from "~/services/projectService.js";
 
 import { mapState } from "vuex";
