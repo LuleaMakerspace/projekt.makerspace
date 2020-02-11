@@ -49,8 +49,8 @@ h6 {
 }
 
 .container {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .section {
