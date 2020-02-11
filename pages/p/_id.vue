@@ -10,11 +10,11 @@
         <br/>
         Detta är en ombyggd version av våran spelsida gjord för att fokusera på spel som går att spela direkt i webläsaren, tänkt för uppvisnings tillfällen. Om du vill spela det här spelet så gå in på <b>projekt.luleamakerspace.se</b> på en dator där du kan ladda ner det.
       </div>
-      <h1>{{project.title}}</h1>
-      <div class="section">
-        <b v-if="project.recommended">
+              <b v-if="project.recommended">
           <i class="fas fa-certificate"></i> Redaktörernas val
         </b>
+      <h1>{{project.title}}</h1>
+      <div class="section">
         <b-row>
           <b-col cols="12" md="6">
             <b>Skapare</b>
