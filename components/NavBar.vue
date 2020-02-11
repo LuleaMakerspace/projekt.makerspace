@@ -8,6 +8,8 @@
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
         <b-collapse is-nav id="nav_collapse">
                 <b-navbar-nav class="ml-auto">
+                    <b-nav-item href="http://www.luleamakerspace.se/?page_id=926">Kalender</b-nav-item>
+                    <b-nav-item href="https://discord.gg/KxkWU6K">Discord</b-nav-item>
                     <b-nav-item href="http://www.luleamakerspace.se/?page_id=13">Bli medlem</b-nav-item>
                     <b-nav-item to="/r/laddaupp">Ladda upp ditt projekt</b-nav-item>
                     <b-nav-form @submit="onSearch" style="display: none;" disabled>
