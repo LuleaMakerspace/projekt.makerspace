@@ -31,17 +31,17 @@
         </p>
         <project-list-horizontal :projects="recommended.slice(1)"></project-list-horizontal>
       </div>
-      <div class="section section-highlight" v-if="newArrivals">
+      <div class="section">
         <p>
-          <b>Nya släpp ({{newArrivals.length}})</b>
+          <b>Spela direkt här ({{projects.length}})</b>
         </p>
-        <project-list-horizontal :projects="newArrivals"></project-list-horizontal>
+        <project-list :projects="projects"></project-list>
       </div>
       <div class="section">
         <p>
-          <b><i class="fas fa-sort-alpha-down"></i> Alla spel ({{projects.length}})</b>
+          <b>Alla spel ({{allProjects.length}})</b>
         </p>
-        <project-list :projects="projects"></project-list>
+        <project-list :projects="allProjects"></project-list>
       </div>
     </div>
   </div>
@@ -64,23 +64,22 @@ export default {
     ProjectCard
   },
   async asyncData({ error }) {
+    let baseQuery = projectCollection.orderBy("embed").where("embed", ">", '')
     try {
       let projects = await getProjects(
-        projectCollection.orderBy("title", "asc")
+        baseQuery.orderBy("title", "asc")
       );
+      let allProjects = await getProjects(projectCollection.orderBy("published", "desc"))
       let recommended = await getProjects(
-        projectCollection
+        baseQuery
           .where("recommended", "==", true)
           .orderBy("published", "desc")
           .limit(6)
       );
-      let newArrivals = await getProjects(
-        projectCollection.orderBy("published", "desc").limit(6)
-      );
       if (!projects) {
         throw { statusCode: 404 };
       }
-      return { projects, recommended, newArrivals };
+      return { projects, recommended, allProjects };
     } catch (e) {
       error(e);
     }

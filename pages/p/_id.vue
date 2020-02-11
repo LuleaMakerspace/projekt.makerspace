@@ -1,6 +1,15 @@
 <template>
   <div class="container">
     <div v-if="project">
+      <div
+        class="section-highlight section"
+        v-if="!project.embed"
+        id="play-options"
+      >
+        <b>Spela spelet på din egen dator</b>
+        <br/>
+        Detta är en ombyggd version av våran spelsida gjord för att fokusera på spel som går att spela direkt i webläsaren, tänkt för uppvisnings tillfällen. Om du vill spela det här spelet så gå in på <b>projekt.luleamakerspace.se</b> på en dator där du kan ladda ner det.
+      </div>
       <h1>{{project.title}}</h1>
       <div class="section">
         <b v-if="project.recommended">
@@ -23,18 +32,6 @@
             <span>{{project.event}}</span>
           </b-col>
         </b-row>
-      </div>
-      <div
-        class="section-highlight section"
-        v-if="project.download || project.extern"
-        id="play-options"
-      >
-        <a :href="project.download" class="button" v-if="project.download">
-          <b-button variant="dark" class="dark-btn" target="_blank"><i class="fas fa-folder"></i> Ladda ned</b-button>
-        </a>
-        <a :href="project.extern" class="button" v-if="project.extern" target="_blank">
-          <b-button variant="dark" class="dark-btn"><i class="fas fa-share"></i> Spela på annan sida</b-button>
-        </a>
       </div>
       <div
         v-if="project.embed"
@@ -65,19 +62,10 @@
       </div>
       <div class="section">
         <b-row>
-          <b-col cols="12" md="6">
+          <b-col cols="12">
             <b>Beskrivning</b>
             <br />
             <p>{{project.description}}</p>
-          </b-col>
-          <b-col v-if="project.links && project.links.length > 0" cols="12" md="6">
-            <b>Länkar</b>
-            <br />
-            <ul>
-              <li v-for="(link, index) in project.links" :key="index">
-                <a :href="project.links[index]">{{project.links[index]}}</a>
-              </li>
-            </ul>
           </b-col>
         </b-row>
       </div>
@@ -91,13 +79,6 @@
         <project-list :projects="related"></project-list>
       </div>
     </div>
-    <div id="disqus_thread"></div>
-    <noscript>
-      Please enable JavaScript to view the
-      <a
-        href="https://disqus.com/?ref_noscript"
-      >comments powered by Disqus.</a>
-    </noscript>
   </div>
 </template>
 
