@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
+    <div class="container" style="padding-bottom: 40px;">
       <div class="section section-highlight">
         <b>Spelkvällar på Luleå Makerspace</b>
         <br/>
