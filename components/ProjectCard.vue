@@ -22,7 +22,7 @@
               v-if="project.download"
               v-b-tooltip.hover
               title="Nedladdning tillgänglig"
-              style="color: #64d3f7"
+              style="color: #71d8f9"
             >
               <i class="fas fa-folder"></i>
             </span>
