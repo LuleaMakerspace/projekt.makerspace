@@ -1,6 +1,9 @@
 <template>
   <div class="container">
     <div v-if="project">
+      <div class="section">
+      <b-button variant="dark" class="dark-btn" @click="$router.back()"><i class="fas fa-long-arrow-alt-left"></i> Tillbaka</b-button>
+      </div>
       <div
         class="section-highlight section"
         v-if="!project.embed"

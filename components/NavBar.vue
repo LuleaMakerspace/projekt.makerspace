@@ -5,6 +5,12 @@
             <img src="https://pbs.twimg.com/profile_images/442295892305932289/u6pIlt0z.png" class="d-inline-block align-top" alt="BV" style="height: 30px; width: 30px; border-radius: 100%;">
             Luleå Makerspace Projekt
         </b-navbar-brand>
+        <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+        <b-collapse is-nav id="nav_collapse">
+                <b-navbar-nav class="ml-auto">
+                    <b-nav-item>Se alla spel på projekt.luleamakerspace.se</b-nav-item>
+                </b-navbar-nav>
+        </b-collapse>
         </b-navbar>
     </div>
 </template>
