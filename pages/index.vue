@@ -1,15 +1,31 @@
 <template>
   <div>
     <div class="container" style="padding-bottom: 40px;">
-      <div class="section section-highlight">
+      <div class="section section-highlight" style="display: none;">
         <b>Spelkvällar på Luleå Makerspace</b>
-        <br/>
-        <a href="https://www.google.com/maps/place/Lule%C3%A5+Makerspace/@65.5804582,22.1367667,17z/data=!3m1!4b1!4m5!3m4!1s0x467f65586235945d:0x57d227a863637257!8m2!3d65.5804582!4d22.1389607"><i class="fas fa-map-marker-alt"></i></a> Tisdagar 18.30 <i class="fas fa-long-arrow-alt-right"></i> 21.00
+        <br />
+        <a
+          href="https://www.google.com/maps/place/Lule%C3%A5+Makerspace/@65.5804582,22.1367667,17z/data=!3m1!4b1!4m5!3m4!1s0x467f65586235945d:0x57d227a863637257!8m2!3d65.5804582!4d22.1389607"
+        >
+          <i class="fas fa-map-marker-alt"></i>
+        </a> Tisdagar 18.30
+        <i class="fas fa-long-arrow-alt-right"></i> 21.00
+      </div>
+      <!--- TEMPORÄR -->
+      <div class="section section-highlight" style="background-color: #ff5353; color: white">
+        <b><i class="fas fa-exclamation"></i> Spelkvällar på Luleå Makerspace</b>
+        <br />
+        På grund av rådande omständigheter med COVID-19 så är alla evenemang i Luleå Makerspace lokalen inställda. Besök gärna våran Discord kanal för mer information om video-möten och andra relaterade frågor.
       </div>
       <b-row>
-        <b-col cols="12" lg="6" style="display: flex;
+        <b-col
+          cols="12"
+          lg="6"
+          style="display: flex;
   justify-content: center;
-  flex-direction: column;" class="section">
+  flex-direction: column;"
+          class="section"
+        >
           <h1 style="font-size: 3.5em;">Våra spel</h1>
           <h2>Luleå Makerspace</h2>
         </b-col>
@@ -39,7 +55,10 @@
       </div>
       <div class="section">
         <p>
-          <b><i class="fas fa-sort-alpha-down"></i> Alla spel ({{projects.length}})</b>
+          <b>
+            <i class="fas fa-sort-alpha-down"></i>
+            Alla spel ({{projects.length}})
+          </b>
         </p>
         <project-list :projects="projects"></project-list>
       </div>
