@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container" style="padding-bottom: 40px;">
-      <div class="section section-highlight" style="display: none;">
+      <div class="section section-highlight">
         <b>Spelkvällar på Luleå Makerspace</b>
         <br />
         <a
@@ -10,12 +10,6 @@
           <i class="fas fa-map-marker-alt"></i>
         </a> Tisdagar 18.30
         <i class="fas fa-long-arrow-alt-right"></i> 21.00
-      </div>
-      <!--- TEMPORÄR -->
-      <div class="section section-highlight" style="background-color: #ff5353; color: white">
-        <b><i class="fas fa-exclamation"></i> Spelkvällar på Luleå Makerspace</b>
-        <br />
-        På grund av rådande omständigheter med COVID-19 så är alla evenemang i Luleå Makerspace lokalen inställda. Besök gärna våran Discord kanal för mer information om video-möten och andra relaterade frågor.
       </div>
       <b-row>
         <b-col
